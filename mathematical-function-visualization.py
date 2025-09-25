@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def formula(x):
-    return x**2   # Define the function, example: f(x) = x²
+    return np.sin(x)   # Define the function, example: f(x) = sin(x)
 
 # Generate data
 x = np.linspace(-10, 10, 100) #From x1 = -10 to x2 = 10, and output 100 points between x1 and x2
@@ -10,7 +10,7 @@ y = formula(x)
 
 # Create the plot
 plt.figure(figsize=(12, 8))
-plt.plot(x, y, 'b-', linewidth=2, label='f(x) = x²')
+plt.plot(x, y, 'b-', linewidth=2, label='f(x) = sin(x)')
 
 # Enhanced axes visibility
 plt.axhline(y=0, color='black', linewidth=2, alpha=0.8)  # x-axis
@@ -21,7 +21,7 @@ plt.xlabel('x-axis', fontsize=14, fontweight='bold')
 plt.ylabel('y-axis', fontsize=14, fontweight='bold')
 
 # Title and grid
-plt.title('Graph of Mathematical Formula with Clear Axes', fontsize=16, fontweight='bold')
+plt.title('Graph of Mathematical Formula', fontsize=16, fontweight='bold')
 plt.grid(True, alpha=0.3, linestyle='--')
 
 # Customize ticks for better visibility
